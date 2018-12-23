@@ -1,9 +1,6 @@
-package basic_java;
-
-import sun.misc.SharedSecrets;
+package t2_basic_java;
 
 import java.io.*;
-import java.util.ConcurrentModificationException;
 
 public class Topic3 {
     /*
@@ -25,9 +22,13 @@ public class Topic3 {
                 基于继承、接口实现。
 
         2.对象初始化步骤(1)：
-            （1）所有域被初始化为默认值（0，false，null）
-            （2）按照声明顺序，依次执行初始化语句、初始化块
-            （3）执行构造器
+            静态成员变量>静态初始化块>成员变量>初始化块>构造方法
+            一般顺序为 先静态，后非静态，先变量，后初始化块，再是构造方法
+            （1）静态成员变量
+            （2）然后静态初始化块
+            （3）所有域被初始化为默认值（0，false，null）
+            （4）按照声明顺序，依次执行初始化语句、初始化块
+            （5）执行构造器
         3.方法
             （1）Java中，方法的签名是：方法名+参数类型列表（多做OJ，找到自己对语法理解有误的地方）
             （2）方法的重载
@@ -38,7 +39,13 @@ public class Topic3 {
             访问权限不同的方法覆盖，子类只能相对父类越来越宽松，例如父类是public，子类就不能是缺省或protect，private
 
         5.有继承的情况下，对象初始化步骤(2)：
-
+            （1）父类静态成员和静态初始化块，按在代码中出现的顺序依次执行。
+            （2）子类静态成员和静态初始化块，按在代码中出现的顺序依次执行。
+            （3）父类的实例成员和实例初始化块，按在代码中出现的顺序依次执行。
+            （4）执行父类的构造方法。
+            （5）子类实例成员和实例初始化块，按在代码中出现的顺序依次执行。
+            （6）执行子类的构造方法。
+            https://www.cnblogs.com/mcxiaotan/p/8059173.html
 
         7.Object
             (1)Object是所有类的父类；
@@ -62,9 +69,11 @@ public class Topic3 {
                 }
 
                 public Object clone()...{
-
+                    B b=this.b.clone();
+                    return new A(b,this.a);
                 }
             }
+
         9.序列化
             把Java对象转换为字节序列，用于存储或网络传输。（序列化的是实例属性）
             Java的序列化是比较低效的，其他的选择有Thrift、Hessian、Protobuf等
@@ -106,11 +115,11 @@ public class Topic3 {
                 IOException
                 ArrayIndexOutOfBoundException
                 OutOfMemoryError（OOM）
+                InterruptedException
 
             try-catch-finally
-                先产生的异常被抑制，后产生的异常被抛出；（有可能导致我们真正关心的异常被抑制，解决办法：try-with-resource，资源变量要实现AutoClosable接口）
-
-
+                先产生的异常被抑制，后产生的异常被抛出；
+                （有可能导致我们真正关心的异常被抑制，解决办法：try-with-resource，资源变量要实现AutoClosable接口）
 
      */
 

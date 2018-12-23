@@ -1,4 +1,4 @@
-package basic_java;
+package t2_basic_java;
 
 public class Topic2 {
     /*
