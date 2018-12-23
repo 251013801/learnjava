@@ -43,13 +43,18 @@ public class Topic2 {
              结合"Java内存模型"理解。
      */
     static class Item{
-        int i=0;
+        volatile int i=0;
 
         public Item() {
         }
 
         public void incre(){
-            i++;
+            i=i+1;
+            /*
+                1. 读进来
+                2.加，赋值
+                3.写回去
+             */
         }
 
         @Override
@@ -67,7 +72,7 @@ public class Topic2 {
         }
 
         public void run() {
-            for(int i=0;i<1000;i++){
+            for(int i=0;i<10000;i++){
                 this.item.incre();
             }
         }

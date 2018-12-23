@@ -5,7 +5,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Topic3 {
     /*
         5. concurrent包
-        （1）ReentrantLock
+        （1）ReentrantLock（可重入锁）
+            注意点：
+                对同一个锁上锁
+                finally解锁
+
             ReentrantLock和synchronized的异同：
             同：
                 1.都可以实现同步
@@ -27,8 +31,8 @@ public class Topic3 {
             相对于排他锁，提高了并发性。
 
         （3）线程安全的集合
-            同步包装器
-            ConcurrentHashMap
+            同步包装器(装饰器)
+            ConcurrentHashMap，HashTable，
             ConcurrentSkipListSet
             ConcurrentLinkedQueue
             等。
@@ -43,7 +47,9 @@ public class Topic3 {
                 阻塞、抛异常、返回特殊值、定时返回（超时返回特殊值）
 
             几种常见的BlockingQueue：
-
+                LinkedBlockingQueue
+                ArrayBlockingQueue
+                SynchronousQueue
 
         （5）线程池
             如果并发的线程数量很多，并且每个线程都是执行一个时间很短的任务就结束了，这样频繁创建线程就会大大降低系统的效率，因为频繁创建线程和销毁线程需要时间。
@@ -62,21 +68,21 @@ public class Topic3 {
 
             public ThreadPoolExecutor(int corePoolSize,    核心池的大小
                                       int maximumPoolSize, 线程池最大线程数
-                                      long keepAliveTime,  表示线程没有任务执行时最多保持多久时间会终止
+                                      long keepAliveTime,  表示核心线程池外的线程，没有任务执行时最多保持多久时间会终止
                                       TimeUnit unit,       时间单位
                                       BlockingQueue<Runnable> workQueue,  阻塞队列，用来存储等待执行的任务
-                                      ThreadFactory threadFactory,        线程工厂，主要用来创建线程
+                                      ThreadFactory threadFactory,        线程工厂，主要用来创建线程（给线程起名字，帮助我们维护日志）
                                       RejectedExecutionHandler handler)   表示当拒绝处理任务时的策略
 
-            ThreadPoolExecutor组成：（1）线程池，（2）阻塞队列
+            ThreadPoolExecutor组成：（1）线程池（核心线程池。总线程池）（2）阻塞队列   （3）拒绝策略
             重要方法：execute()、submit()、shutdown()、shutdownNow()
 
             线程池执行任务（Runnable\Callable）的过程：
                 （1）如果当前线程池中的线程数目小于corePoolSize，则每来一个任务，就会创建一个线程去执行这个任务；
                 （2）如果当前线程池中的线程数目>=corePoolSize，则每来一个任务，会尝试将其添加到任务阻塞队列当中，
                     若添加成功，则该任务会等待空闲线程将其取出去执行；若添加失败（一般来说是任务缓存队列已满），则会尝试创建新的线程去执行这个任务；
-                （3）如果当前线程池中的线程数目达到maximumPoolSize，则会采取任务拒绝策略进行处理；
-                （4）另外，当池子的线程数大于corePoolSize的时候，多余的线程会等待keepAliveTime长的时间，如果无请求可处理就自行销毁
+                （3）如果当前线程池中的线程数目达到maximumPoolSize，则会采取任务拒绝策略进行处理；如果没达到，则新建线程处理；
+                （4）另外，当池子的线程数大于corePoolSize的时候，多余的空闲线程会等待keepAliveTime长的时间，如果无请求可处理就自行销毁。
 
             由上，可知2个重要的参数：corePoolSize、maximumPoolSize。（corePoolSize、maximumPoolSize往往设置为同一个数，避免频繁关闭创建线程）
 

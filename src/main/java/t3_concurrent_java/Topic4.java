@@ -6,6 +6,7 @@ public class Topic4 {
         （1）Semaphore
                 Semaphore类是一个计数信号量，必须由获取它的线程释放，
                 通常用于限制可以访问某些资源（物理或逻辑的）线程数目。
+
         （2）CountDownLatch（例子）
                 CountDownLatch是一个计数器，它的构造方法需要传入一个int值，表示计数，
                 调用其实例的await方法，阻塞当前线程，
