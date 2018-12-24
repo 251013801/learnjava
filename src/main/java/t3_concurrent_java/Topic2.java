@@ -23,7 +23,7 @@ public class Topic2 {
                 c.synchronized(object)，锁住onject对象
               synchronized又叫对象锁，它锁住的是一个实例对象或者一个类对象：
                 a.要执行被锁住的方法或者代码段，就必须要获取锁，
-                b.对象锁只能被一个线程所获取，并且对象锁是可以重入的（避免死锁）。
+                b.对象锁只能被一个线程所获取，并且对象锁是可以"重入"的（避免死锁）。
 
             2.notify、wait（条件变量）
               一个线程拿到"对象锁"，如果要等待达成某个条件，再继续执行。
@@ -36,54 +36,99 @@ public class Topic2 {
                 继续竞争锁，并执行，若没在while中，则可能会在条件不符合的情况下就执行了后面的代码。
 
                 sb问题：wait()和sleep的区别?
+                    1.概念完全不同
+
+                    2.wait方法会释放锁，sleep会继续持有锁
+
+
 
         4. volatile
              保证可见性、有序性，
              不保证原子性。
              结合"Java内存模型"理解。
      */
-    static class Item{
-        volatile int i=0;
+static class Item {
+    int i = 0;
 
-        public Item() {
-        }
-
-        public void incre(){
-            i=i+1;
-            /*
-                1. 读进来
-                2.加，赋值
-                3.写回去
-             */
-        }
-
-        @Override
-        public String toString() {
-            return "Item{" +
-                    "i=" + i +
-                    '}';
-        }
+    public Item() {
     }
 
-    static class A implements Runnable{
-        Item item;
-        public A(Item item) {
-            this.item=item;
-        }
-
-        public void run() {
-            for(int i=0;i<10000;i++){
-                this.item.incre();
+    public synchronized void incre() {
+        if(i>=10){
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
+        i++;
+        if(i>=10){
+            this.notify();
+        }
     }
 
+    public synchronized void decre() {
+        if(i<=10){
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        i--;
+        if(i>=10){
+            this.notify();
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "i=" + i +
+                '}';
+    }
+}
+
+static class A implements Runnable {
+    Item item;
+
+    public A(Item item) {
+        this.item = item;
+    }
+
+    public void run(){
+        for (int i = 0; i < 100; i++) {
+
+            this.item.incre();
+            System.out.println("incre "+this.item.i);
+        }
+    }
+}
+
+static class B implements Runnable {
+    Item item;
+
+    public B(Item item) {
+        this.item = item;
+    }
+
+    public void run(){
+        for (int i = 0; i < 100; i++) {
+
+            this.item.decre();
+
+            System.out.println("decre "+this.item.i);
+        }
+    }
+}
+
     public static void main(String[] args) throws InterruptedException {
-        Item item=new Item();
-        A a1=new A(item);
-        A a2=new A(item);
-        Thread t1=new Thread(a1);
-        Thread t2=new Thread(a2);
+        Item item = new Item();
+        A a = new A(item);
+        B b = new B(item);
+        Thread t1 = new Thread(a);
+        Thread t2 = new Thread(b);
         t1.start();
         t2.start();
         t1.join();
