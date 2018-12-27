@@ -2,7 +2,7 @@ package t4_jvm;
 
 public class Topic1 {
     /*
-        1.组成
+        1.JVM组成
             程序计数器：线程私有，当前线程执行的字节码行号指示器
 
             虚拟机栈：Java线程私有，描述java方法执行的内存模型，每个方法执行的同时，都会创建一个栈帧保存相关信息。
@@ -43,5 +43,6 @@ public class Topic1 {
 
         9.逃逸分析
 
+        10.ThreadLocal
      */
 }

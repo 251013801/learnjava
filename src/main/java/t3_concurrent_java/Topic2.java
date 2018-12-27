@@ -54,31 +54,11 @@ static class Item {
     }
 
     public synchronized void incre() {
-        if(i>=10){
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
         i++;
-        if(i>=10){
-            this.notify();
-        }
     }
 
     public synchronized void decre() {
-        if(i<=10){
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
         i--;
-        if(i>=10){
-            this.notify();
-        }
     }
 
 
@@ -99,36 +79,18 @@ static class A implements Runnable {
 
     public void run(){
         for (int i = 0; i < 100; i++) {
-
             this.item.incre();
-            System.out.println("incre "+this.item.i);
         }
     }
 }
 
-static class B implements Runnable {
-    Item item;
-
-    public B(Item item) {
-        this.item = item;
-    }
-
-    public void run(){
-        for (int i = 0; i < 100; i++) {
-
-            this.item.decre();
-
-            System.out.println("decre "+this.item.i);
-        }
-    }
-}
 
     public static void main(String[] args) throws InterruptedException {
         Item item = new Item();
-        A a = new A(item);
-        B b = new B(item);
-        Thread t1 = new Thread(a);
-        Thread t2 = new Thread(b);
+        A a1 = new A(item);
+        A a2 = new A(item);
+        Thread t1 = new Thread(a1);
+        Thread t2 = new Thread(a2);
         t1.start();
         t2.start();
         t1.join();
