@@ -108,6 +108,9 @@ public class Topic6 {
 
         4.ConcurrentHashMap
             JDK1.7中HashMap在并插入的情况下，可能会造成死循环。
+            解释：在并发的情况，发生扩容时，可能会产生循环链表，(两个线程同时扩容，由于扩容时链表转移会颠倒顺序，导致两个线程同时对一个链表)
+                 在执行get的时候，会触发死循环，引起CPU的100%问题，所以一定要避免在并发环境下使用HashMap。
+            https://blog.csdn.net/silyvin/article/details/79102415
 
             HashTable,
             Collections.synchronizedMap : java.util.Collections.synchronizedMap
