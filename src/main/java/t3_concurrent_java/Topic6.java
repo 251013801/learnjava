@@ -107,11 +107,67 @@ public class Topic6 {
             volatile 能保证单个读写的原子性，但不能保证 i++ 这样的复合操作的"原子性"。
 
         4.ConcurrentHashMap
-            JDK1.7
+            JDK1.7中HashMap在并插入的情况下，可能会造成死循环。
 
+            HashTable,
+            Collections.synchronizedMap : java.util.Collections.synchronizedMap
+                |
+                | 上面两个都是通过synchronized实现同步，
+                | 下面采用分段锁，提高并发度
+                |
+            JDK1.7
+                分段锁、两次哈希，segment  java.util.concurrent.ConcurrentHashMap.Segment
+                segment数目代表了ConcurrentHashMap的并发度(2^n，默认16)，
+                    get操作：
+                            先定位segment，在定位HashEntry，
+                            注意get方法没有加锁，而是采用 UNSAFE.getObjectVolatile ，保证每次读取到的都是最新的数据
+                            (同样使用的还有final和volatile)
+
+                    put操作：
+                            Segment 继承自ReentrantLock，
+                            定位segment, 若为空，则并发安全的创建 Segment ，
+                            不为空，则对Segment上锁（分段锁一名的来源），线程安全的put key-value对；
+
+                    扩容操作：
+                            put时，若segment对应的数组大于threshold， 对segment指向的数组扩容；
+
+                    size操作：
+                            ConcurrentHashMap的size操作的实现方法也非常巧妙，
+                            一开始并不对Segment加锁，而是直接尝试将所有的Segment元素中的count相加，
+                            这样执行两次，然后将两次的结果对比，如果两次结果相等则直接返回；
+                            而如果两次结果不同，则再将所有Segment加锁，然后再执行统计得到对应的size值。
+
+                    https://blog.csdn.net/bill_xiang_/article/details/81122044
 
             JDK1.8
+                    1.8中放弃了Segment臃肿的设计，取而代之的是采用Node + CAS + Synchronized来保证并发安全进行实现
 
+                    改进一：取消segments字段，直接采用transient volatile HashEntry<K,V>[] table保存数据，
+                    采用table数组元素作为锁，从而实现了对每一行数据进行加锁，进一步减少并发冲突的概率。
+
+                    改进二：将原先table数组＋单向链表的数据结构，变更为table数组＋单向链表＋红黑树的结构。
+                    当链表元素个数超过8(默认值)时，jdk1.8中采用了红黑树的结构；
+                    此举防止不理想的情况下，一些队列长度过长的情况下，查询某个节点的时间复杂度O(n)过高；
+                    那么红黑树的查询的时间复杂度可以降低到O(logN)，可以改进性能。
+
+                    1.8中ConcurrentHashMap加锁时，采用的是数组元素的对象锁（synchronized）
+
+
+                    get操作：
+                            与1.7类似，不上锁，借助UNSAFE.getObjectVolatile、final和volatile，保证每次读取到的都是最新的数据
+
+                    put操作：
+                            （1）未初始化，则初始化
+                            （2）数组中对应的位置为null，生成新的Node，并CAS设置，成功则停止，失败往后走
+                            （3）正在扩容，则帮助扩容
+                            （4）加锁，插入新元素
+                            （5）最后检查容量，决定是否扩容
+
+                    扩容操作：
+                            当新增元素时，如果链表元素大于等于TREEIFY_THRESHOLD（默认为8），则进行扩容；
+                            （1）当数组大小小于MIN_TREEIFY_CAPACITY（默认64）时，首先对数组扩容；
+                                这里的数组扩容，允许使用多个线程进行并发扩容
+                            （2）当数组大小等于MIN_TREEIFY_CAPACITY（默认64）时，加锁，将链表变为红黑树；
 
 
         5.AQS（AbstractQueuedSynchronizer）*
@@ -136,6 +192,8 @@ public class Topic6 {
                 tryRelease：释放同步状态的操作
 
             http://www.cnblogs.com/chengxiao/archive/2017/07/24/7141160.html
+
+            ReentrantLock、ReentrantReadWriteLock实现的是我们如何取获取同步状态。
 
         6.ReentrantLock*
                 内部抽象类Sync
@@ -201,6 +259,8 @@ public class Topic6 {
 
                 ThreadPoolExecutor的设计又很多巧妙的地方，在此不一一列举，可以思考一个问题：
                     ThreadPoolExecutor用哪些方法实现了同步，并且为什么在那种情况下用这种同步方法？
+
+        10. ThreadLocal
 
 
      */

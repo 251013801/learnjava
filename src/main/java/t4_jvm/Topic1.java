@@ -17,6 +17,13 @@ public class Topic1 {
             堆外内存：
 
         2.对象的垃圾回收（GC）规则
+            计数法
+
+            GC Root法：
+
+
+                GC Roots：
+
 
 
         3.Java堆的组成
