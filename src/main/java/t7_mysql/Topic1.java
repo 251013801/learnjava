@@ -5,7 +5,7 @@ public class Topic1 {
             1.索引
             （1）B+树
             （2）执行计划（explain）
-                        （3）SQL调优
+            （3）SQL调优
 
 
             2.事务
