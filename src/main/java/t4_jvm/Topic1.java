@@ -96,17 +96,25 @@ public class Topic1 {
 
                 CMS收集器（Concurrent Mark Sweep）：
                     老年代，多线程，Stop the world，Server模式下老年代默认垃圾回收器
-                    以获得最短停顿时间为目标。
+                    以获得"最短停顿时间"为目标。
                     其垃圾回收过程相对较复杂，分为四个步骤：
                         （1）初始标记（Stop the world）
-
+                            收集GC Roots直接关联的对象，停顿时间很短；
                         （2）并发标记
-
+                            并发收集关联的对象，不停顿；
                         （3）重新标记（Stop the world）
-
+                            对之前的可达性分析进行校正，停顿时间较短；
                         （4）并发清除
+                            并发清除不可达的对象。
 
-                    CMF（Concurrent Mode Failure）
+                    缺点：
+                        （1）对CPU资源敏感
+                        （2）浮动垃圾可能导致CMF
+                        （3）采用标记-清除算法，会带来碎片
+                            不过，通过JVM参数设置，我们可以让JVM定期在Full GC时对老年代进行压缩
+
+                    CMF（Concurrent Mode Failure）：
+
 
                 G1收集器（Garbage First）：
 
