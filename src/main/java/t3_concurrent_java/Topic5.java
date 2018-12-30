@@ -23,8 +23,8 @@ public class Topic5 {
                                     |
                                 2.双重检查
                                     |
-                                    | 冲排序导致的并发问题
-                                    |  1.先申请内存 2.构造Singleton 3.将instance指向新的内存区域 (1,3,2)
+                                    | 代码重排序导致的并发问题
+                                    |  1.先申请内存 2.构造Singleton 3.将instance变量指向新的内存区域的地址 (1,3,2)
                                     |
                                 3.解决：
                                     （1）volatile (禁止重排序)
@@ -61,6 +61,25 @@ class LazySingleton {
     public static LazySingleton getInstance() {
         if(single == null){
             single = new LazySingleton();
+        }
+        return single;
+    }
+}
+
+class LazySingleton2 {
+
+    // 私有构造
+    private LazySingleton2() {}
+
+    private static volatile LazySingleton2 single = null;
+
+    public static LazySingleton2 getInstance() {
+        if(single == null){
+            synchronized (LazySingleton2.class){
+                if(single == null) {
+                    single = new LazySingleton2();
+                }
+            }
         }
         return single;
     }
