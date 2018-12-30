@@ -2,6 +2,11 @@ package t3_concurrent_java;
 
 public class Topic6 {
     /*
+        1.ConcurrentHashMap
+        2.ThreadPoolExecutor、BlockingQueue
+        3.AQS、ReentrantLock、ReentrantReadWriteLock
+        4.synchronized
+        重要性（易考）由高到低
         关键实现：
         1.synchronized
 
