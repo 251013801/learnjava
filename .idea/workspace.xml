@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c68bcb46-e404-4fb9-ad14-d33391b27acf" name="Default Changelist" comment="jdk并发原理">
-      <change afterPath="$PROJECT_DIR$/src/main/java/t4_jvm/ThreadLocalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t4_jvm/Topic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t4_jvm/Topic1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +37,7 @@
         <counts>
           <entry key="class" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="270" />
+          <entry key="java" value="273" />
           <entry key="jpg" value="5" />
           <entry key="png" value="2" />
           <entry key="txt" value="1" />
@@ -51,7 +49,7 @@
           <entry key="CLASS" value="3" />
           <entry key="Git file" value="1" />
           <entry key="Image" value="7" />
-          <entry key="JAVA" value="270" />
+          <entry key="JAVA" value="273" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="5" />
         </counts>
@@ -60,14 +58,14 @@
         <counts>
           <entry key="dummy" value="7" />
           <entry key="gitignore" value="8" />
-          <entry key="java" value="18050" />
+          <entry key="java" value="18065" />
           <entry key="txt" value="16" />
           <entry key="xml" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18050" />
+          <entry key="JAVA" value="18065" />
           <entry key="PLAIN_TEXT" value="31" />
           <entry key="XML" value="59" />
         </counts>
@@ -84,48 +82,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/t4_jvm/Topic1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="164" column="20" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
+            <state relative-caret-position="415">
+              <caret line="227" column="18" selection-start-line="227" selection-start-column="18" selection-end-line="227" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/t4_jvm/ThreadLocalTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="97" selection-start-line="9" selection-start-column="97" selection-end-line="9" selection-end-column="97" />
-              <folding>
-                <element signature="e#114#122#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/ThreadLocal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="162" column="30" selection-start-line="162" selection-start-column="30" selection-end-line="162" selection-end-column="30" />
-              <folding>
-                <element signature="e#7765#7766#0" expanded="true" />
-                <element signature="e#7802#7803#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="1963" column="24" selection-start-line="1963" selection-start-column="24" selection-end-line="1963" selection-end-column="39" />
-              <folding>
-                <element signature="e#36709#36710#0" expanded="true" />
-                <element signature="e#36767#36768#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -267,8 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,11 +237,6 @@
             <path>
               <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -298,14 +251,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t3_concurrent_java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
@@ -325,55 +270,72 @@
             </path>
             <path>
               <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t6_Algo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t7_mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t8_distributed_system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t9_other" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Maven: org.springframework:spring-beans:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-core:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-core:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-core-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-core:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-core-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-core:4.3.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-core-4.3.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="threadLocals&#9;PSI&#9;JAVA://java.lang.Thread#threadLocals&#10;java.lang.Thread#threadLocals&#9;PSI&#9;JAVA://java.lang.Thread&#10;InheritableThreadLocal&#9;PSI&#9;JAVA://java.lang.InheritableThreadLocal&#10;Thread&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Thread.java&#10;ThreadLocal&#9;PSI&#9;JAVA://java.lang.ThreadLocal&#10;DriverManager&#9;PSI&#9;JAVA://java.sql.DriverManager&#10;Driver&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/com/sun/java/util/jar/pack/Driver.class&#10;Reference&#9;PSI&#9;JAVA://java.lang.ref.Reference&#10;ReentrantLock&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java&#10;ThreadPoolExecutor&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java&#10;ArrayBlockingQueue&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java&#10;ReentrantReadWriteLock&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java&#10;Abstra&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;Con&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java&#10;java.util.concurrent.ConcurrentHashMap.Segment&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap.Segment&#10;concurr&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java&#10;UNSAFE&#9;PSI&#9;JAVA://sun.misc.Unsafe&#10;segment&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap.Segment&#10;Collections&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Collections.java&#10;ConcurrentHashMap&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Reen&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java&#10;AbstractQueuedSynchronizer&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedSynchronizer&#10;BlockingQueue&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java&#10;CyclicBarrier&#9;PSI&#9;JAVA://java.util.concurrent.CyclicBarrier&#10;Semaphore&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;AtomicInteger&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/atomic/AtomicInteger.java&#10;ExecutorService&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/AbstractExecutorService.java&#10;Exchanger&#9;PSI&#9;JAVA://java.util.concurrent.Exchanger&#10;CountDownLatch&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/CountDownLatch.java&#10;SynchronousQueue&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/SynchronousQueue.java&#10;executo&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;ArrayBl&#9;PSI&#9;JAVA://java.util.concurrent.ArrayBlockingQueue&#10;AtomicRe&#9;PSI&#9;JAVA://java.util.concurrent.atomic.AtomicReference&#10;HashMap&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/HashMap.java&#10;Object&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java&#10;AutoClo&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/AutoCloseable.java&#10;Arra&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;object&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java&#10;reentrant&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantLock&#10;Hash&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/HashMap.java&#10;Auto&#9;PSI&#9;JAVA://java.lang.AutoCloseable&#10;Error&#9;PSI&#9;JAVA://java.lang.Error&#10;Throwable&#9;PSI&#9;JAVA://java.lang.Throwable&#10;ArrayList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;Serializable&#9;PSI&#9;JAVA://java.io.Serializable&#10;Cloneable&#9;PSI&#9;JAVA://java.lang.Cloneable&#10;Array&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;ObjectOut&#9;PSI&#9;JAVA://java.io.ObjectOutputStream&#10;Objec&#9;PSI&#9;JAVA://java.lang.Object&#10;Arrays&#9;PSI&#9;JAVA://java.util.Arrays" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546317712029" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546737925244" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -393,7 +355,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadLocalTest">
+  <component name="RunManager" selected="Application.Topic1 (1)">
+    <configuration name="ContainerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="spring.ContainerTest" />
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="t4_jvm.ThreadLocalTest" />
       <module name="javalearn" />
@@ -433,38 +408,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Topic2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="t3_concurrent_java.Topic2" />
-      <module name="javalearn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="t3_concurrent_java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Topic3 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="t3_concurrent_java.Topic3" />
       <module name="javalearn" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="t3_concurrent_java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Topic3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="t2_basic_java.Topic3" />
-      <module name="javalearn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="t1_intro.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -491,14 +440,15 @@
       <item itemvalue="Application.Topic3 (1)" />
       <item itemvalue="Application.Topic1 (1)" />
       <item itemvalue="Application.ThreadLocalTest" />
+      <item itemvalue="Application.ContainerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreadLocalTest" />
         <item itemvalue="Application.Topic1 (1)" />
+        <item itemvalue="Application.ContainerTest" />
+        <item itemvalue="Application.ThreadLocalTest" />
         <item itemvalue="Application.Topic3 (1)" />
         <item itemvalue="Application.Topic2 (1)" />
-        <item itemvalue="Application.Topic3" />
       </list>
     </recent_temporary>
   </component>
@@ -608,10 +558,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -620,7 +570,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32289156" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3219858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -686,6 +636,12 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ssm/src/main/java/spring/ContainerTest.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -694,13 +650,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/t2_basic_java/Topic3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/Condition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -840,10 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="34" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="42" selection-end-column="34" />
-          <folding>
-            <element signature="e#2452#2453#0" expanded="true" />
-            <element signature="e#2499#2500#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/t5_frame/Topic2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/t5_frame/Topic3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -963,9 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#32972#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,10 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="721">
           <caret line="162" column="30" selection-start-line="162" selection-start-column="30" selection-end-line="162" selection-end-column="30" />
-          <folding>
-            <element signature="e#7765#7766#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,10 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="1963" column="24" selection-start-line="1963" selection-start-column="24" selection-end-line="1963" selection-end-column="39" />
-          <folding>
-            <element signature="e#36709#36710#0" expanded="true" />
-            <element signature="e#36767#36768#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1030,16 +957,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="97" selection-start-line="9" selection-start-column="97" selection-end-line="9" selection-end-column="97" />
-          <folding>
-            <element signature="e#114#122#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.5.RELEASE/spring-context-4.3.5.RELEASE-sources.jar!/org/springframework/context/ApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/t5_frame/Topic2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/t4_jvm/Topic1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="164" column="20" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
+        <state relative-caret-position="415">
+          <caret line="227" column="18" selection-start-line="227" selection-start-column="18" selection-end-line="227" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
