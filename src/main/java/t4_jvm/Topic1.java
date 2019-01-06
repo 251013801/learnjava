@@ -153,7 +153,7 @@ public class Topic1 {
             jhat：  JVM Heap Dump Browser，用于分析heapdump文件，它可以建立一个http/html服务，使用者可以在浏览器上查看分析结果；
             jstack：Stack Trace for Java，显示JVM的线程快照。
 
-        6.性能调优(我的经验也比较匮乏)
+        6.性能调优
           目标；
             GC的时间足够的小
             GC的次数足够的少
@@ -264,6 +264,9 @@ public class Topic1 {
 
         ReferenceQueue queue = new ReferenceQueue();
         PhantomReference<Map> reference=new PhantomReference(new HashMap(), queue);
+        while(true){
+
+        }
 
     }
 }
