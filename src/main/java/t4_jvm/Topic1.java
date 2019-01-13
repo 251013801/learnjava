@@ -36,6 +36,7 @@ public class Topic1 {
             引用计数法：通过引用计数来判断一个对象是否可以被回收。
 
                       简单高效，但无法解决循环引用问题。
+                      A->B B->A
 
             可达性分析法：通过一系列的GC Roots的对象作为起始点，从这些根节点开始向下搜索，搜索所走过的路径称为引用链（Reference Chain），
                         当一个对象到GC Roots没有任何引用链相连时，则证明此对象是不可用的。
@@ -68,10 +69,17 @@ public class Topic1 {
                     Eden区：
                     From Survivor区：
                     To Survivor区：
+                    结合新生代对象九死一生的特点，采用复制算法，同时8:1:1的比例最大化利用内存空间。
+                    每次只浪费十分之一的新生代内存，同时保证垃圾回收的速度。
 
                 老年代：
                     1.长期存活的对象进入老年代
-                    2.大对象直接进入老年代
+                    2.大对象直接进入老年代   生命周期短的大对象对生命周期伤害较大。
+
+                垃圾回收：
+                    young GC：
+
+                    full GC：
 
             垃圾回收器：
                 注意的问题：
@@ -101,18 +109,14 @@ public class Topic1 {
                     老年代，多线程，Stop the world，标记-整理算法，Parallel Scavenge的老年代版本
                     https://blog.csdn.net/qq_33915826/article/details/79672772（各种垃圾回收器的组合）
 
-                CMS收集器（Concurrent Mark Sweep）：
-                    老年代，多线程，Stop the world，Server模式下老年代默认垃圾回收器
+                CMS收集器（Concurrent Mark Sweep，并发标记清除）：
+                    老年代，多线程，Stop the world，Server模式下老年代默认垃圾回收器，标记清除算法
                     以获得"最短停顿时间"为目标。
                     其垃圾回收过程相对较复杂，分为四个步骤：
-                        （1）初始标记（Stop the world）
-                            收集GC Roots直接关联的对象，停顿时间很短；
-                        （2）并发标记
-                            并发收集关联的对象，不停顿；
                         （1）初始标记（Stop the world，GC Roots）
-
+                            收集GC Roots直接关联的对象，停顿时间很短；
                         （2）并发标记(不停顿)
-
+                            并发收集关联的对象，不停顿；
                         （3）重新标记（Stop the world）
                             对之前的可达性分析进行校正，停顿时间较短；
                         （4）并发清除（不停顿）
@@ -164,6 +168,7 @@ public class Topic1 {
             jmap：  Memory Map for Java，用于生成JVM的内存快照；
             jhat：  JVM Heap Dump Browser，用于分析heapdump文件，它可以建立一个http/html服务，使用者可以在浏览器上查看分析结果；
             jstack：Stack Trace for Java，显示JVM的线程快照。
+            https://www.cnblogs.com/zengweiming/p/8946195.html
 
         6.性能调优
           目标；
@@ -180,7 +185,7 @@ public class Topic1 {
             内存泄漏：不再使用的变量仍然占用内存空间。
             不再使用，然而引用仍然长期存在的对象不会被GC所回收，这就造成了内存泄漏。
                 比如，单例模式中的单例对象，静态属性，以及静态的集合对象中引用的对象，ThreadLocal
-            总之，Java中产生对象，究其原因是我们没有及时释放过期对象的引用。
+            总之，Java中产生内存泄露，究其原因是我们没有及时释放过期对象的引用。
 
         8.类加载机制
             类加载机制：把描述类的数据加载到内存中，并对数据进行校验，转换解析和初始化，最终形成可以在Java虚拟机中使用的Java类型。
@@ -201,6 +206,9 @@ public class Topic1 {
                     （3）初始化一个类，它的父类还没有初始化
                     （4）虚拟机启动时会加载main方法所在的主类
                 有些类似背书的规则没在这里列举。
+
+            类加载器：
+                查找并加载类的二进制数据
 
             双亲委派模型：
                 除了顶层的类加载器，每个类都有自己的父加载器；
@@ -261,8 +269,9 @@ public class Topic1 {
                 解决办法，当ThreadLocal使用完毕后，调用ThreadLocal的remove方法。
 
             https://blog.csdn.net/zhailuxu/article/details/79067467
+
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         SoftReference<Map> reference2=new SoftReference(new HashMap());
         System.out.println(reference2.get());
@@ -277,7 +286,8 @@ public class Topic1 {
         ReferenceQueue queue = new ReferenceQueue();
         PhantomReference<Map> reference=new PhantomReference(new HashMap(), queue);
         while(true){
-
+            HashMap m=new HashMap();
+            Thread.sleep(10);
         }
 
     }
