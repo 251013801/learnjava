@@ -108,7 +108,7 @@ public class Topic3 {
                     默认情况下，Spring 容器中未打开注解装配。因此，您需要在使用它之前在 Spring 配置文件中启用它。
                         <beans>
                             <context:annotation-config/>
-                            <!-- bean definitions go here -->
+                            <!-- carrot.bean definitions go here -->
                         </beans>
 
                     常用注解：

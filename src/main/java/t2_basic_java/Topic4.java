@@ -14,7 +14,7 @@ public class Topic4 {
                     散列函数（Hash函数）：
                         a.依赖Key对象的hashCode方法
                         b.高低位异或，增大随机性（扰动），避免Key对象散列函数的缺陷
-                        c.定位时&取余（性能好），缩小范围；java/util/HashMap.java:630  ————>  HashMap的长度必须是2^n
+                        c.定位时&取余（性能好），缩小范围；java/carrot.util/HashMap.java:630  ————>  HashMap的长度必须是2^n
                           32 11111
                           31 11110
                            3 10  01、11用不上

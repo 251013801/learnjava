@@ -121,13 +121,13 @@ public class Topic6 {
             https://blog.csdn.net/silyvin/article/details/79102415
 
             HashTable,
-            Collections.synchronizedMap : java.util.Collections.synchronizedMap
+            Collections.synchronizedMap : java.carrot.util.Collections.synchronizedMap
                 |
                 | 上面两个都是通过synchronized实现同步，
                 | 下面采用分段锁，提高并发度
                 |
             JDK1.7
-                分段锁、两次哈希，segment  java.util.concurrent.ConcurrentHashMap.Segment
+                分段锁、两次哈希，segment  java.carrot.util.concurrent.ConcurrentHashMap.Segment
                 segment数目代表了ConcurrentHashMap的并发度(2^n，默认16)，
                     get操作：
                             先定位segment，在定位HashEntry，

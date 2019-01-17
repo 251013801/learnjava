@@ -9,7 +9,7 @@ public class BeanLife implements BeanNameAware,  BeanFactoryAware, InitializingB
 
     private int i=1;
     {
-        System.out.println("01: init bean instance");
+        System.out.println("01: init carrot.bean instance");
     }
     public int getI() {
         return i;
