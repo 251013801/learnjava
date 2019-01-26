@@ -77,10 +77,53 @@ public class Topic4 {
                         例子
 
             b.AOP原理
+                核心实现：
+                    ProxyFactoryBean
+                    如图，可以看到AOP代理类的生成过程，
+                    最终会由JdkDynamicAopProxy或者CglibProxyFactory的getProxy方法生成动态代理实例
+
+                    Advice数组会存在一个list中，在执行一个方法时，会查看Advisor（切点+增强，类似aspect，aspect不包括切入方式）列表，
+                    查看每个Advisor中的增强是否该执行，并处理。
+
+                    https://www.jianshu.com/p/40f79da0cdef
 
         （5）事务管理器的实现
+             声明式（代理实现）：
+                注解方式：
+                    @Transactional
+
+                xml配置：
+
+             编程式：
+                TransactionTemplate
+                    TransactionTemplate 实例的execute方法传入 TransactionCallback （接口） 实例。
+
+
+             原理：
+
+                 JDBC事务实现：
+                    try{
+                         con.setAutoCommit(false);//开启事务
+                         ......
+                         con.commit();//try的最后提交事务
+                    } catch（） {
+                        con.rollback();//回滚事务
+                    }
+
+                org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin （设置autocommit）
+
+             思考：
+                1.代理实现事务有什么问题没有？
+                2.Datasource是线程安全的吗？
+
+             事务的传播特性（考点）
+                一个事务方法内部调用另一个事务方法时的处理。
+                根据业务场景来选择。
+
 
         （6）AOP需要注意的问题
+                Spring AOP能生效是因为，我们是从容器中取出来的代理类实例，通过代理实例调用方法，调用的实际是代理方法。
+                如果在本类实例的方法中调用本实例的另一个方法，则不会经过代理。
 
      */
 }
