@@ -36,6 +36,7 @@ public class ContainerTest {
 //
 //        System.out.println(userService);
         UserService userService = (UserService)context.getBean("userService");
+        System.out.println(userService.getClass());
         userService.getUser();
         userService.printUser();
     }

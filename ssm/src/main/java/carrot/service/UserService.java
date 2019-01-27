@@ -6,11 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    public User getUser(){
+
+    public User getUser() {
+        printUser();
         return new User();
     }
 
-    public User printUser(){
+    public User printUser() {
         System.out.println("print User");
         return getUser();
     }

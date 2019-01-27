@@ -6,21 +6,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-    <carrot.bean id="foo" class="spring.Foo">
+    <bean id="foo" class="spring.Foo">
         <property name="i" value="1"></property>
-    </carrot.bean>
-    <!--<carrot.bean id="test" class="spring.Test"  autowire="constructor">-->
+    </bean>
+    <!--<bean id="test" class="spring.Test"  autowire="constructor">-->
 
-    <carrot.bean id="test" class="spring.Test">
+    <bean id="test" class="spring.Test">
         <constructor-arg name="foo" ref="foo"></constructor-arg>
         <constructor-arg name="i" value="1"></constructor-arg>
-    </carrot.bean>
+    </bean>
 
-    <carrot.bean id="beanLifeTest" class="beans.BeanLife" init-method="initMethod" destroy-method="destroyMethod">
+    <bean id="beanLifeTest" class="beans.BeanLife" init-method="initMethod" destroy-method="destroyMethod">
         <property name="i" value="10">
         </property>
 
-    </carrot.bean>
+    </bean>
 
     <context:annotation-config/>
     <context:component-scan base-package="spring" />
@@ -29,4 +29,6 @@
     <aop:aspectj-autoproxy />
     <context:component-scan base-package="carrot.service" />
     <context:component-scan base-package="aop" />
+
+    <!--<bean id="testAdvisor" class="">-->
 </beans>
