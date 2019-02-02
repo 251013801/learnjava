@@ -15,10 +15,10 @@ public class Topic6 {
               SqlSessionFactory用于生产SqlSession。
 
             (3)SqlSession
-            SqlSession从SQL Mapper获取sql语句，并执行，最后返回sql执行的结果。
+               SqlSession从SQL Mapper获取sql语句，并执行，最后返回sql执行的结果。
 
-            (4)SQL Mapper
-              用于描述结构化的SQL语句，将SQL语句抽象为方法，并定义入参、结果，以及他们和POJO的映射关系。
+            (4)SQLMapper
+              用于描述结构化的SQL语句，将SQL语句抽象为方法，并定义入参、结果，以及他们和POJO（Plain Ordinary Java Object）的映射关系。
 
         2.SqlSessionFactoryBuilder、SqlSessionFactory、SqlSession的生命周期
             SqlSessionFactoryBuilder用于创建SqlSessionFactory，之后就可以被丢弃，只使用一次。
@@ -29,7 +29,7 @@ public class Topic6 {
             SqlSession并不是线程安全的，所以SqlSession的作用范围应该局限于一个HTTP请求内。
 
         3.SqlSession核心组件
-            SqlSession是Mybatis完成SQL操作的核心组件，是一个门面类，提供了统一的使用接口。
+            SqlSession是Mybatis完成SQL操作的核心组件，是一个门面类，提供了统一的使用接口（屏蔽内部组件的复杂性）。
             实际工作由Executor、StatementHandler、ParameterHandler、ResultSetHandler完成。
             Configuration是在SqlSessionFactoryBuilder中生成的，由SqlSessionFactory传递给每一个生成的SqlSession。
             Configuration包含了该数据源在Mybatis中的所有配置信息，其中就包括SQL Statement的Map。
@@ -64,7 +64,9 @@ public class Topic6 {
 
         5.StatementHandler、ParameterHandler、ResultSetHandler
             我们知道JDBC分5步：加载驱动程序、获得连接、创建Statement对象（JDBC Statement用于执行一条SQL语句，并返回执行结果。），执行SQL，处理结果。后三步在Mybatis中由StatementHandler完成。
-            Executor通过Configuration创建RoutingStatementHandler，RoutingStatementHandler会根据MappedStatement的具体类型的到真正的StatementHandler实例，并将操作委托给该实例，默认地，StatementHandler类型为PreparedStatementHandler（也就是说我们的SQL默认是通过PreparedStatement提交到JDBC，不过要使用#，而不是$，但对于表名则需要使用$，进行字符串拼接，此时要注意代码层面的安全控制）。StatementHandler也是采用了模版模式。
+            Executor通过Configuration创建RoutingStatementHandler，RoutingStatementHandler会根据MappedStatement的具体类型的到真正的StatementHandler实例，
+            并将操作委托给该实例，默认地，StatementHandler类型为PreparedStatementHandler（也就是说我们的SQL默认是通过PreparedStatement提交到JDBC，
+            不过要使用#，而不是$，但对于表名则需要使用$，进行字符串拼接，此时要注意代码层面的安全控制）。StatementHandler也是采用了模版模式。
             StatementHandler中借助ParameterHandler对参数进行处理，借助ResultSetHandler对返回值进行处理。
 
         6. Mybatis的缓存处理

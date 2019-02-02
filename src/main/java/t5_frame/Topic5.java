@@ -28,7 +28,7 @@ public class Topic5 {
 
                         自动装配原理（了解此原理，有助于我们安装组件，甚至我们编写自己的自动装配类）
 
-                        扫描项目路径下所有的jar包，将jar包META-INF/spring.factories配置中配置类注入的容器中.
+                        扫描项目路径下所有的jar包，将jar包"META-INF/spring.factories"配置中配置类注入的容器中.
 
                         mybatis-spring-boot-autoconfigure-1.3.2.jar!/META-INF/spring.factories
 

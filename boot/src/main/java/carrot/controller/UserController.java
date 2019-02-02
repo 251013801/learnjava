@@ -27,6 +27,7 @@ public class UserController {
         return Result.successRs();
     }
 
+    @ResponseBody
     @RequestMapping(value = "/user/{name}",method = RequestMethod.GET)
     public User findUser(HttpServletRequest request,@PathVariable("name") String  name){
         return userService.getUser(name);

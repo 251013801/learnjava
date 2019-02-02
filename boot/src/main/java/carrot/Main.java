@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -18,6 +19,13 @@ import java.applet.AppletContext;
 @MapperScan("carrot.mapper")
 public class Main implements ApplicationContextAware {
     static ApplicationContext context;
+
+    @Bean("Myname")
+    public Object getObject(){
+        //return new Object();
+        return context.getBean("Myname");
+    }
+
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class);

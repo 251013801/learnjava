@@ -11,7 +11,7 @@ public class Topic4 {
 
         （2）基本概念
             Aspect（切面）：
-                Aspect 声明类似于 Java 中的类声明，在 Aspect 中会包含着一些 Pointcut 以及相应的 Advice。
+                Aspect 声明类似于 Java 中的类声明，在 Aspect 中会包含着一些 "Pointcut" 以及相应的 "Advice"。
             Joint point（连接点）：
                 表示在"程序中明确定义的点"，典型的包括方法调用，对类成员的访问以及异常处理程序块的执行等等，
                 它自身还可以嵌套其它 joint point。
@@ -33,7 +33,7 @@ public class Topic4 {
                 <aop:aspectj-autoproxy />
                 注意  xmlns:aop="http://www.springframework.org/schema/aop"
 
-            2.完成连接点的业务逻辑：
+            2.完成切面（连接点，增强）的业务逻辑：
 
             3.定义AOP组件：
                 定义Advie（增强）和Pointcut（切点）形成Aspect（切面）。
@@ -98,6 +98,9 @@ public class Topic4 {
                 TransactionTemplate
                     TransactionTemplate 实例的execute方法传入 TransactionCallback （接口） 实例。
 
+            commit、rollback场景：
+                方法内没有任何没catch的异常，事务commit
+                方法内有没catch的异常，事务rollback
 
              原理：
 
@@ -113,8 +116,8 @@ public class Topic4 {
                 org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin （设置autocommit）
 
              思考：
-                1.代理实现事务有什么问题没有？
-                2.Datasource是线程安全的吗？
+                1.代理实现事务有什么问题没有？(AOP需要注意的问题,TransactionTemplate解决)
+                2.Datasource是线程安全的吗？ ThreadLocal来保存这个connection
 
              事务的传播特性（考点）
                 一个事务方法内部调用另一个事务方法时的处理。
