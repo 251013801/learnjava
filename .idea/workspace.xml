@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c68bcb46-e404-4fb9-ad14-d33391b27acf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/t6_Algo/排序算法.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/t9_other/IO模型.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/src/main/java/carrot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot/src/main/java/carrot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/src/main/java/carrot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot/src/main/java/carrot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/boot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javalearn.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/concurrent_java/Topic2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/concurrent_java/Topic4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/concurrent_java/Topic5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t5_frame/Topic4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t5_frame/Topic4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t5_frame/Topic5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t5_frame/Topic5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t5_frame/Topic6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t5_frame/Topic6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t5_frame/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t5_frame/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t6_Algo/Topic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t6_Algo/Topic1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t7_mysql/Topic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t7_mysql/Topic1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t8_distributed_system/Topic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t8_distributed_system/Topic1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t8_distributed_system/Topic2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t8_distributed_system/Topic2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t9_other/Topic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t9_other/Topic1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t9_other/Topic2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t9_other/Topic2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm/ssm.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="c68bcb46-e404-4fb9-ad14-d33391b27acf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/ssm/target/" />
@@ -115,11 +93,12 @@
     <session id="71843671">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -153,8 +132,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/t5_frame/Topic3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="168" column="110" selection-start-line="168" selection-start-column="88" selection-end-line="168" selection-end-column="110" />
+            <state relative-caret-position="476">
+              <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -334,6 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,45 +322,17 @@
               <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="javalearn" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javalearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javalearn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="t5_frame" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="MybatisAutoConfiguration&#9;FILE&#9;jar:///Users/carrot/.m2/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.2/mybatis-spring-boot-autoconfigure-1.3.2-sources.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.java&#10;ProxyFactoryBean&#9;FILE&#9;jar:///Users/carrot/.m2/repository/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/ProxyFactoryBean.class&#10;HandlerInterceptorAdapter&#9;PSI&#9;JAVA://org.springframework.web.servlet.handler.HandlerInterceptorAdapter&#10;Has&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/HashMap.java&#10;HashMa&#9;PSI&#9;JAVA://java.util.HashMap&#10;HashMap&#9;null&#9;null&#10;t3_concurrent_java/Topic1.java:5&#9;FILE&#9;file:///Users/carrot/Documents/House Dream/javalearn/src/main/java/t3_concurrent_java/Topic1.java&#10;TransactionTemplate&#9;FILE&#9;jar:///Users/carrot/.m2/repository/org/springframework/spring-tx/4.3.14.RELEASE/spring-tx-4.3.14.RELEASE.jar!/org/springframework/transaction/support/TransactionTemplate.class&#10;TransactionCallback&#9;PSI&#9;JAVA://org.springframework.transaction.support.TransactionCallback&#10;ProxyFa&#9;PSI&#9;JAVA://org.springframework.aop.framework.ProxyFactoryBean&#10;CommandLineRunner&#9;PSI&#9;JAVA://org.springframework.boot.CommandLineRunner&#10;EventPublishingRun&#9;PSI&#9;JAVA://org.springframework.boot.context.event.EventPublishingRunListener&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration&#10;DefaultLoginPageGeneratingFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter&#10;BasicAuthenticationFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.www.BasicAuthenticationFilter&#10;FilterSecurityInterceptor&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;BeanFactoryPostPro&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanFactoryPostProcessor&#10;BeanDefinition&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanDefinition&#10;org.springframework.context.support.AbstractApplicationContext.refresh&#9;PSI&#9;JAVA://org.springframework.context.support.AbstractApplicationContext#refresh&#10;ApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.ApplicationContext&#10;Servlet&#9;FILE&#9;jar:///Users/carrot/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/Servlet.class&#10;DefaultListableBeanFactory&#9;FILE&#9;jar:///Users/carrot/.ideaLibSources/spring-beans-4.3.5.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java&#10;ClassPathXmlApplicationContext&#9;FILE&#9;jar:///Users/carrot/.m2/repository/org/springframework/spring-context/4.3.5.RELEASE/spring-context-4.3.5.RELEASE-sources.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.java&#10;BeanDefin&#9;FILE&#9;jar:///Users/carrot/.m2/repository/org/springframework/spring-beans/4.3.5.RELEASE/spring-beans-4.3.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionRegistry.class&#10;XmlApp&#9;PSI&#9;JAVA://org.springframework.context.support.ClassPathXmlApplicationContext&#10;ThreadLocalMap&#9;PSI&#9;JAVA://java.lang.ThreadLocal.ThreadLocalMap&#10;ThreadLocal&#9;FILE&#9;file:///Users/carrot/Documents/House Dream/javalearn/src/main/java/t4_jvm/ThreadLocalTest.java&#10;Thread&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Thread.java&#10;PhantomReference&#9;PSI&#9;JAVA://java.lang.ref.PhantomReference&#10;threadLocals&#9;PSI&#9;JAVA://java.lang.Thread#threadLocals&#10;java.lang.Thread#threadLocals&#9;PSI&#9;JAVA://java.lang.Thread&#10;InheritableThreadLocal&#9;PSI&#9;JAVA://java.lang.InheritableThreadLocal&#10;DriverManager&#9;PSI&#9;JAVA://java.sql.DriverManager&#10;Driver&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/com/sun/java/util/jar/pack/Driver.class&#10;Reference&#9;PSI&#9;JAVA://java.lang.ref.Reference&#10;ReentrantLock&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java&#10;ThreadPoolExecutor&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java&#10;ArrayBlockingQueue&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java&#10;ReentrantReadWriteLock&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java&#10;Abstra&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;Con&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java&#10;java.util.concurrent.ConcurrentHashMap.Segment&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap.Segment&#10;concurr&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java&#10;UNSAFE&#9;PSI&#9;JAVA://sun.misc.Unsafe&#10;segment&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap.Segment&#10;Collections&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Collections.java&#10;ConcurrentHashMap&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Reen&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java&#10;AbstractQueuedSynchronizer&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedSynchronizer&#10;BlockingQueue&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549001043871" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549093170300" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Properties" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -500,6 +453,7 @@
       <workItem from="1549023675872" duration="395000" />
       <workItem from="1549024662613" duration="668000" />
       <workItem from="1549070240331" duration="705000" />
+      <workItem from="1549092199710" duration="977000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1545575094191</created>
@@ -634,15 +588,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548563284052</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="spring aop demo">
+      <created>1549092249920</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1549092249920</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1768000" />
+    <option name="totallyTimeSpent" value="2745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21581769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1041,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/t5_frame/Topic3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="168" column="110" selection-start-line="168" selection-start-column="88" selection-end-line="168" selection-end-column="110" />
+        <state relative-caret-position="476">
+          <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
         </state>
       </provider>
     </entry>
